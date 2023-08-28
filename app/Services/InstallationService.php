@@ -9,14 +9,17 @@ class InstallationService
     public function start(): void
     {
         $html = <<<'HTML'
-<!DOCTYPE html>
-<html>
-    <body>
-        <p class="message">Hello World!</p>
-        <p>Hello Crawler!</p>
-    </body>
-</html>
-HTML;
+            <!DOCTYPE html>
+            <html lang="en">
+                <body>
+                    <p class="message">Hello World!!!</p>
+                    <p>Hello Crawler!</p>
+                    <a href="https://google.com">google.com</a>
+                    <a href="https://ya.ru">ya.ru</a>
+                    <a href="https://mover.uz">mover.uz</a>
+                </body>
+            </html>
+            HTML;
 
         $crawler = new Crawler($html);
 

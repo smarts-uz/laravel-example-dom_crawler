@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Services\InstallationService;
+use App\Services\NodeFilteringService;
 use App\Services\NodeTraversingService;
 use Illuminate\Console\Command;
 
@@ -30,8 +31,10 @@ class Crawler extends Command
         $install = new InstallationService();
 //        $install->start();
         $nodeTravers = new NodeTraversingService();
-        $nodeTravers->start();
+//        $nodeTravers->start();
 
+        $nodeFilter = new NodeFilteringService();
+        $nodeFilter->start();
 
 
     }
