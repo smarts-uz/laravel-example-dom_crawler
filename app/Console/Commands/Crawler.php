@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Services\InstallationService;
+use App\Services\NodeTraversingService;
 use Illuminate\Console\Command;
 
 class Crawler extends Command
@@ -27,7 +28,11 @@ class Crawler extends Command
     public function handle()
     {
         $install = new InstallationService();
+//        $install->start();
+        $nodeTravers = new NodeTraversingService();
+        $nodeTravers->start();
 
-        $install->start();
+
+
     }
 }
