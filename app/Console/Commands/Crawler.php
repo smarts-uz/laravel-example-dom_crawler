@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Services\AccessingNodeValuesService;
 use App\Services\InstallationService;
 use App\Services\NodeFilteringService;
 use App\Services\NodeTraversingService;
@@ -34,8 +35,10 @@ class Crawler extends Command
 //        $nodeTravers->start();
 
         $nodeFilter = new NodeFilteringService();
-        $nodeFilter->start();
+//        $nodeFilter->start();
 
+        $accessValue = new AccessingNodeValuesService();
+        $accessValue->start();
 
     }
 }
