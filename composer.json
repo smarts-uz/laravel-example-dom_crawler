@@ -12,7 +12,7 @@
         "laravel/telescope": "^4.16",
         "laravel/tinker": "^2.8",
         "moonshine/moonshine": "^1.61",
-        "roach-php/laravel": "^2.0"
+        "symfony/dom-crawler": "^6.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8",
@@ -53,7 +53,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/dusk"
+            ]
         }
     },
     "config": {
