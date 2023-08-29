@@ -6,6 +6,7 @@ use App\Services\AccessingNodeValuesService;
 use App\Services\AddingTheContentService;
 use App\Services\ExpressionEvaluationService;
 use App\Services\InstallationService;
+use App\Services\LinksService;
 use App\Services\NodeFilteringService;
 use App\Services\NodeTraversingService;
 use Illuminate\Console\Command;
@@ -46,6 +47,10 @@ class Crawler extends Command
 //        $add->start();
 
         $expression = new ExpressionEvaluationService();
-        $expression->start();
+//        $expression->start();
+
+        $links = new LinksService();
+        $links->start();
+
     }
 }
