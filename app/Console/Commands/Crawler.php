@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Services\AccessingNodeValuesService;
 use App\Services\AddingTheContentService;
 use App\Services\ExpressionEvaluationService;
+use App\Services\ImagesService;
 use App\Services\InstallationService;
 use App\Services\LinksService;
 use App\Services\NodeFilteringService;
@@ -50,7 +51,9 @@ class Crawler extends Command
 //        $expression->start();
 
         $links = new LinksService();
-        $links->start();
+//        $links->start();
 
+        $images = new ImagesService();
+        $images->start();
     }
 }
