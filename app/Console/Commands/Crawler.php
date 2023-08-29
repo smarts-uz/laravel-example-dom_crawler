@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Services\AccessingNodeValuesService;
 use App\Services\AddingTheContentService;
+use App\Services\ExpressionEvaluationService;
 use App\Services\InstallationService;
 use App\Services\NodeFilteringService;
 use App\Services\NodeTraversingService;
@@ -42,7 +43,9 @@ class Crawler extends Command
 //        $accessValue->start();
 
         $add = new AddingTheContentService();
-        $add->start();
+//        $add->start();
 
+        $expression = new ExpressionEvaluationService();
+        $expression->start();
     }
 }
